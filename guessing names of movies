@@ -1,0 +1,43 @@
+import random
+movielst=['anand','drishyam','nayakan','anbe sivam','golmaal','vikram vedha','black friday','dangal','manichithrathazhu','taare zameen par']
+moviename=random.choice(movielst)
+letter=[]
+for i in moviename:
+    letter.append(i)
+print(letter)
+count=0
+guess=''
+lettercount=1
+for i in letter:
+    if(i!=' '):
+        count=count+1
+        guess=guess+'_,'
+    else:
+        count=count
+        guess=guess
+        lettercount=lettercount+1
+print(f'movie name consist of {count} letters')
+print(f'movie name consist of {lettercount} letters')
+print(guess)
+points=0
+for i in range(50):
+    choice = input("write L to guess a letter and N for guessing full name")
+    if (choice == 'N'):
+        guesses = input("guess the movie name : ")
+        if (guesses == letter):
+            print("you guessed it correctly")
+            points = points + 10
+            print(f"updated score is {points}")
+        break
+        else:
+            print("you guessed it incorrectly")
+        
+    elif (choice == 'L'):
+        hint = input("guess")
+        c = 0
+        for i in letter:
+            if (i != ' ' and hint == i):
+                c = c + 1
+                print(f"you guessed letter no. {c}")
+            else:
+                continue
