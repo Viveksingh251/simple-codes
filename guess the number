@@ -1,0 +1,15 @@
+import random
+a=int(input("enter the starting number"))
+b=int(input("enter the ending number"))
+n=random.randint(a,b)
+print("you have only 7 chance to guess the number ")
+for i in range(1,8):
+    c=int(input(f"this is your {i} guess"))
+    if c>n:
+        print("you guessd  too high:")
+    elif c<n:
+        print("you guessed too small")
+    else:
+        print("congratulation you guessed it right")
+        break
+print("better luck next time")    
