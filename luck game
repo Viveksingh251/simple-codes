@@ -1,0 +1,82 @@
+import random
+z=random.randint(1,50)
+
+player=input("enter the 2nd player C for computer and F for friend")
+if player=="C":
+    print("starting the game with computer")
+    chance=input("enter the chance Enter f for first chance s for second chance. ")
+    if chance=="f":
+        ch=0
+        for x in range(1,100):
+            chances=int(input('enter the times you want to enter the number (not more then 4)'))
+            for i in range(1,chances+1):
+                c=int(input(f'enter your {i} number'))
+                ch+=1
+            if ch>=z:
+                print("you looses the game")
+                break
+            for j in range(1,random.randint(2,5)):
+                print(d:=ch+1)
+                ch+=1
+            if ch>=z:
+                print("you won the game")
+                break
+            print('your turn')
+    elif chance=="s":
+        ch=0
+        for x in range(1,100):
+            chances=int(input('enter the times you want to enter the number (not more then 4)'))
+            for q in range(1,random.randint(2,5)):
+                c=int(input(f'enter your {q} number'))
+                ch+=c
+            if ch>=z:
+                break
+            print('your turn')
+            for w in range(1,chances+1):
+                print(d:=ch)
+                ch+=d
+            if ch>=z:
+                
+                break
+            print('your turn')
+elif player=="F":
+    print("starting the game with your friend")
+    chance=input("enter the chance Enter f for first chance s for second chance. ")
+    if chance=="f":
+        ch=0
+        for x in range(1,100):
+            chances=int(input('enter the times you want to enter the number (not more then 4)'))
+            for i in range(1,chances+1):
+                c=int(input(f'enter your {i} number'))
+                ch+=c
+            if ch>=z:
+                break
+            print('your turn')
+            chances2=int(input('enter the times you want to enter the number (not more then 4)'))
+            for j in range(1,chances2+1):
+                print(d:=ch)
+                ch+=d
+            if ch>=z:
+                break
+            print('your turn')
+    elif chance=="s":
+        ch=0
+        for x in range(1,100):
+            chances2=int(input('enter the times you want to enter the number (not more then 4)'))
+            for q in range(1,chances2+1):
+                c=int(input(f'enter your {q} number'))
+                ch+=c
+            if ch>=z:
+                break
+            print('your turn')
+            chances=int(input('enter the times you want to enter the number (not more then 4)'))
+            for w in range(1,chances+1):
+                print(d:=ch)
+                ch+=d
+            if ch>=z:
+                break
+            print('your turn')
+    else:
+         print('you made some error while giving input ')
+else:
+    print('you made some error while giving input ')
